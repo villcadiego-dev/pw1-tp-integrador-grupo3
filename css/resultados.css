@@ -1,1 +1,204 @@
 /* Estilos específicos de la Vista Resultados de búsqueda. */
+
+/* Layout Principal */
+.container-resultados {
+  display: flex;
+  gap: 1.5%;
+  margin-top: var(--space-lg);
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.aside {
+  flex: 0 0 22%;
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  background: white;
+  border-radius: var(--radius-md);
+}
+
+.listado-vuelos {
+  flex: 0 0 50%;
+  background: var(--color-primary-bg);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+/* Tarjeta de Vuelo */
+.tarjeta-vuelo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  gap: 20px;
+}
+
+.columna-aerolinea {
+    display: flex;
+    flex-direction: column;
+  flex: 0 0 120px;
+}
+
+.etiqueta-vuelo {
+  font-weight: bold;
+  color: var(--color-primary-light);
+}
+
+.nombre-aerolinea {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Columna Ruta y Línea de Tiempo */
+.columna-ruta {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trayecto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duracion, .escalas {
+  font-size: 0.75rem;
+  color: var(--color-primary-light);
+}
+
+.linea-tiempo {
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary-light);
+  margin: 8px 0;
+  position: relative;
+}
+
+.punto {
+    display: flex;
+    flex-direction: column;
+}
+
+.punto-escala {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary-light);
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.punto .codigo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Columna Precio y Acción */
+.columna-precio {
+  flex: 0 0 160px;
+  text-align: right;
+}
+
+.disponibilidad {
+  font-size: 0.75rem;
+  color: var(--color-alerta);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.action-precio .valor {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 5px;
+}
+
+.boton-ver {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--space-lg);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-ver:hover {
+  background: var(--color-primary-light);
+}
+
+/* Estilos de Equipaje y Políticas (Aside Derecho) */
+.item-equipaje {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--space-sm);
+  margin-bottom: 10px;
+}
+
+.item-equipaje .nombre {
+    margin: 0.5rem 0;
+}
+
+.item-equipaje.incluido {
+  background: var(--color-primary-bg);
+}
+
+.item-equipaje .estado {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.politica {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.indicador {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.enlace-ver-mas {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Acordeones (Aside Izquierdo) */
+.acordeon summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 10px;
+}
+
+.acordeon .contenido {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rango-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+}

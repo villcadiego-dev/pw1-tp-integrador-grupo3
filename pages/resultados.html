@@ -4,15 +4,329 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FlyNow - Resultados de búsqueda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/resultados.css" />
 </head>
 <body>
-  <header class="site-header"></header>
+    <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 
-  <main></main>
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
 
-  <footer class="site-footer"></footer>
+      <a href="./inicio.html" class="brand">
+        <i class="fa-solid fa-plane"></i>
+        <span>FlyNow</span>
+      </a>
+
+      <ul class="utility-nav">
+        <li><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+        <li><a href="#"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li><a href="#">Registrarse</a></li>
+        <li><a href="#" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html"  class="active">Vuelos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="container-resultados">
+    <aside class="filtros aside">
+      <h2>Filtrar por</h2>
+      
+      <details class="acordeon" open>
+        <summary>Precio</summary>
+        <div class="contenido">
+          <input type="range" min="100" max="5000" step="50">
+          <div class="rango-labels"><span>$ Min</span><span>$ Max</span></div>
+        </div>
+      </details>
+      
+      <details class="acordeon" open>
+        <summary>Tipo de Vuelo</summary>
+        <div class="contenido">
+          <label><input type="checkbox"> Directo</label>
+          <label><input type="checkbox"> Con escalas</label>
+        </div>
+      </details>
+      
+      <details class="acordeon" open>
+        <summary>Aerolínea</summary>
+        <div class="contenido">
+          <label><input type="checkbox"> Aerolineas Argentinas</label>
+          <label><input type="checkbox"> Iberia</label>
+          <label><input type="checkbox"> Air Europa</label>
+        </div>
+      </details>
+    </aside>
+    
+    <section class="listado-vuelos">
+      <h1>Vuelos encontrados para Madrid</h1>
+      <article class="tarjeta-vuelo">
+          <div class="columna-aerolinea">
+              <span class="etiqueta-vuelo">IDA</span>
+                <span class="nombre-aerolinea">Aerolíneas Argentinas</span>
+          </div>
+
+          <div class="columna-ruta">
+              <div class="punto">
+                  <span class="codigo">BUE</span>
+                  <span class="hora">00:50</span>
+              </div>
+              
+              <div class="trayecto">
+                  <span class="duracion">13h</span>
+                  <div class="linea-tiempo">
+                      <span class="punto-escala"></span>
+                  </div>
+                  <span class="escalas">1 Escala - Lima</span>
+              </div>
+
+              <div class="punto">
+                  <span class="codigo">MAD</span>
+                  <span class="hora">15:50</span>
+              </div>
+          </div>
+          <div class="columna-precio">
+              <span class="disponibilidad">Quedan 10 asientos</span>
+              <div class="action-precio">
+                  <span class="valor">890 USD</span>
+                  <button class="boton-ver">
+                    Ver vuelo
+                </button>
+              </div>
+
+          </div>
+      </article>
+            <article class="tarjeta-vuelo">
+          <div class="columna-aerolinea">
+              <span class="etiqueta-vuelo">IDA</span>
+                <span class="nombre-aerolinea">Aerolíneas Argentinas</span>
+          </div>
+
+          <div class="columna-ruta">
+              <div class="punto">
+                  <span class="codigo">BUE</span>
+                  <span class="hora">01:10</span>
+              </div>
+              
+              <div class="trayecto">
+                  <span class="duracion">12h</span>
+                  <div class="linea-tiempo">
+                      <span class="punto-escala"></span>
+                  </div>
+                  <span class="escalas">1 Escala - Río de Janeiro</span>
+              </div>
+
+              <div class="punto">
+                  <span class="codigo">MAD</span>
+                  <span class="hora">13:10</span>
+              </div>
+          </div>
+          <div class="columna-precio">
+              <span class="disponibilidad">Quedan 3 asientos</span>
+              <div class="action-precio">
+                  <span class="valor">999 USD</span>
+                  <button class="boton-ver">
+                    Ver vuelo
+                </button>
+              </div>
+
+          </div>
+      </article>
+            <article class="tarjeta-vuelo">
+          <div class="columna-aerolinea">
+              <span class="etiqueta-vuelo">IDA</span>
+                <span class="nombre-aerolinea">Iberia</span>
+          </div>
+
+          <div class="columna-ruta">
+              <div class="punto">
+                  <span class="codigo">BUE</span>
+                  <span class="hora">01:30</span>
+              </div>
+              
+              <div class="trayecto">
+                  <span class="duracion">10h</span>
+                  <div class="linea-tiempo">
+                      <span class="punto-escala"></span>
+                  </div>
+                  <span class="escalas">Sin escalas</span>
+              </div>
+
+              <div class="punto">
+                  <span class="codigo">MAD</span>
+                  <span class="hora">11:30</span>
+              </div>
+          </div>
+          <div class="columna-precio">
+              <span class="disponibilidad">Quedan 5 asientos</span>
+              <div class="action-precio">
+                  <span class="valor">1149 USD</span>
+                  <button class="boton-ver">
+                    Ver vuelo
+                </button>
+              </div>
+
+          </div>
+      </article>
+    </section>
+    
+    <aside class="detalles-seleccion aside">
+      
+      <section class="seccion-equipaje">
+        <h2>Equipaje para tu viaje</h2>
+        <div class="contenedor-equipajes">
+          <div class="item-equipaje incluido">
+            <div class="texto">
+              <p class="nombre">Equipaje de mano</p>
+              <p class="estado">Incluido</p>
+            </div>
+          </div>
+          
+          <div class="item-equipaje">
+            <div class="texto">
+              <p class="nombre">Equipaje en cabina</p>
+              <p class="estado">+ $25 USD</p>
+            </div>
+            <input type="checkbox" class="check-equipaje">
+          </div>
+          
+          <div class="item-equipaje">
+            <div class="texto">
+              <p class="nombre">Equipaje en bodega</p>
+              <p class="estado">+ $50 USD</p>
+            </div>
+            <input type="checkbox" class="check-equipaje">
+          </div>
+        </div>
+      </section>
+      
+      <section class="seccion-politicas">
+          <h2>Políticas del vuelo</h2>
+          <div class="lista-politicas">
+              <div class="politica">
+                  <span class="indicador"><i class="fa-solid fa-circle-check"></i></span>
+                  <p>Cancelación gratuita antes de las 24hs.</p>
+              </div>
+              <div class="politica">
+                <span class="indicador"><i class="fa-solid fa-circle-info"></i></span>                  
+                <p>Cambios sujetos a disponibilidad.</p>
+              </div>
+              
+              <div class="container-ver-mas">
+                  <a href="#" class="enlace-ver-mas">Ver todas las políticas de vuelo <i class="fa-solid fa-chevron-right"></i></a>
+              </div>
+          </div>
+      </section>
+      
+    </aside>
+  </main>
+  
+    <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>FlyNow</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input
+            type="email"
+            id="email-newsletter"
+            name="email"
+            placeholder="Tu email"
+            required
+          />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="#">política de privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de FlyNow</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con FlyNow.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 FlyNow. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
