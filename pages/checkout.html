@@ -1,18 +1,427 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FlyNow - Checkout</title>
+  <meta name="description" content="Completá tus datos para confirmar la reserva de tu vuelo en FlyNow." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/checkout.css" />
 </head>
+
 <body>
-  <header class="site-header"></header>
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 
-  <main></main>
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
 
-  <footer class="site-footer"></footer>
+      <a href="./inicio.html" class="brand">
+        <i class="fa-solid fa-plane"></i>
+        <span>FlyNow</span>
+      </a>
+
+      <ul class="utility-nav">
+        <li class="hide-mobile"><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+        <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li class="hide-mobile"><a href="#">Registrarse</a></li>
+        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
+        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html" class="active">Vuelos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="principal-checkout">
+
+    <div class="progreso-pasos">
+      <div class="paso-progreso completado">
+        <div class="circulo-paso"><i class="fa-solid fa-check"></i></div>
+        <span class="etiqueta-paso">Búsqueda</span>
+      </div>
+      <div class="linea-progreso completada"></div>
+      <div class="paso-progreso completado">
+        <div class="circulo-paso"><i class="fa-solid fa-check"></i></div>
+        <span class="etiqueta-paso">Selección</span>
+      </div>
+      <div class="linea-progreso completada"></div>
+      <div class="paso-progreso activo">
+        <div class="circulo-paso">3</div>
+        <span class="etiqueta-paso">Checkout</span>
+      </div>
+      <div class="linea-progreso"></div>
+      <div class="paso-progreso">
+        <div class="circulo-paso">4</div>
+        <span class="etiqueta-paso">Confirmación</span>
+      </div>
+    </div>
+
+    <div class="diseno-checkout">
+
+      <div class="columna-formularios">
+
+        <section class="tarjeta-seccion" id="datos-pasajero">
+          <h2><i class="fa-solid fa-user"></i> Datos del pasajero</h2>
+
+          <form class="formulario-pasajero" id="formulario-checkout" action="#" method="post" novalidate>
+            <div class="fila-campos">
+              <div class="grupo-campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: María" required />
+              </div>
+              <div class="grupo-campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ej: González" required />
+              </div>
+            </div>
+
+            <div class="fila-campos">
+              <div class="grupo-campo">
+                <label for="tipo-doc">Tipo de documento</label>
+                <select id="tipo-doc" name="tipo-doc" required>
+                  <option value="">Seleccioná</option>
+                  <option value="dni">DNI</option>
+                  <option value="pasaporte">Pasaporte</option>
+                  <option value="cedula">Cédula</option>
+                </select>
+              </div>
+              <div class="grupo-campo">
+                <label for="num-doc">Número de documento</label>
+                <input type="text" id="num-doc" name="num-doc" placeholder="Ej: 38.123.456" required />
+              </div>
+            </div>
+
+            <div class="fila-campos">
+              <div class="grupo-campo">
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required />
+              </div>
+              <div class="grupo-campo">
+                <label for="nacionalidad">Nacionalidad</label>
+                <select id="nacionalidad" name="nacionalidad" required>
+                  <option value="">Seleccioná</option>
+                  <option value="argentina">Argentina</option>
+                  <option value="brasileña">Brasileña</option>
+                  <option value="uruguaya">Uruguaya</option>
+                  <option value="chilena">Chilena</option>
+                  <option value="otra">Otra</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="fila-campos">
+              <div class="grupo-campo">
+                <label for="email-pasajero">Correo electrónico</label>
+                <input type="email" id="email-pasajero" name="email" placeholder="ejemplo@correo.com" required />
+              </div>
+              <div class="grupo-campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 11 1234 5678" required />
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="tarjeta-seccion" id="equipaje">
+          <h2><i class="fa-solid fa-suitcase"></i> Equipaje adicional</h2>
+
+          <div class="equipaje-lista">
+            <div class="equipaje-item incluido">
+              <div class="equipaje-icono">
+                <i class="fa-solid fa-bag-shopping"></i>
+              </div>
+              <div class="equipaje-info">
+                <p class="equipaje-nombre">Equipaje de mano</p>
+                <p class="equipaje-desc">Hasta 10 kg · 40×30×20 cm</p>
+              </div>
+              <span class="etiqueta-incluido">Incluido</span>
+            </div>
+
+            <label class="equipaje-item seleccionable" for="check-cabina">
+              <div class="equipaje-icono">
+                <i class="fa-solid fa-suitcase-rolling"></i>
+              </div>
+              <div class="equipaje-info">
+                <p class="equipaje-nombre">Equipaje en cabina</p>
+                <p class="equipaje-desc">Hasta 15 kg · 55×40×25 cm</p>
+              </div>
+              <div class="equipaje-precio-check">
+                <span class="equipaje-precio">+ $25 USD</span>
+                <input type="checkbox" id="check-cabina" name="equipaje-cabina" class="check-equipaje" />
+              </div>
+            </label>
+
+            <label class="equipaje-item seleccionable" for="check-bodega">
+              <div class="equipaje-icono">
+                <i class="fa-solid fa-suitcase"></i>
+              </div>
+              <div class="equipaje-info">
+                <p class="equipaje-nombre">Equipaje en bodega</p>
+                <p class="equipaje-desc">Hasta 23 kg · 158 cm lineales</p>
+              </div>
+              <div class="equipaje-precio-check">
+                <span class="equipaje-precio">+ $50 USD</span>
+                <input type="checkbox" id="check-bodega" name="equipaje-bodega" class="check-equipaje" />
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="tarjeta-seccion" id="pago">
+          <h2><i class="fa-solid fa-credit-card"></i> Método de pago</h2>
+
+          <div class="opciones-pago">
+            <button class="opcion-pago activa" id="boton-tarjeta" type="button">
+              <i class="fa-solid fa-credit-card"></i> Tarjeta
+            </button>
+            <button class="opcion-pago" id="boton-transferencia" type="button">
+              <i class="fa-solid fa-building-columns"></i> Transferencia
+            </button>
+          </div>
+
+          <div class="contenido-pago">
+            <div class="vista-previa-tarjeta">
+              <div class="chip-tarjeta"><i class="fa-solid fa-microchip"></i></div>
+              <div class="numero-vista-previa">•••• •••• •••• ••••</div>
+              <div class="pie-tarjeta">
+                <span>NOMBRE APELLIDO</span>
+                <span>MM/AA</span>
+              </div>
+            </div>
+
+            <div class="fila-campos">
+              <div class="grupo-campo ancho-completo">
+                <label for="titular">Titular de la tarjeta</label>
+                <input type="text" id="titular" name="titular" placeholder="Como figura en la tarjeta" />
+              </div>
+            </div>
+            <div class="fila-campos">
+              <div class="grupo-campo ancho-completo">
+                <label for="numero-tarjeta">Número de tarjeta</label>
+                <div class="campo-con-icono">
+                  <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="1234 5678 9012 3456"
+                    maxlength="19" />
+                  <i class="fa-brands fa-cc-visa icono-marca"></i>
+                </div>
+              </div>
+            </div>
+            <div class="fila-campos">
+              <div class="grupo-campo">
+                <label for="vencimiento">Vencimiento</label>
+                <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" maxlength="5" />
+              </div>
+              <div class="grupo-campo">
+                <label for="cvv">CVV <i class="fa-solid fa-circle-question ayuda-cvv"
+                    title="Los 3 dígitos del dorso de tu tarjeta"></i></label>
+                <input type="text" id="cvv" name="cvv" placeholder="•••" maxlength="4" />
+              </div>
+            </div>
+            <div class="fila-campos">
+              <div class="grupo-campo ancho-completo">
+                <label for="cuotas">Cuotas</label>
+                <select id="cuotas" name="cuotas">
+                  <option value="1">1 cuota sin interés</option>
+                  <option value="3">3 cuotas sin interés</option>
+                  <option value="6">6 cuotas</option>
+                  <option value="12">12 cuotas</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="contenido-pago">
+            <div class="transferencia-info">
+              <i class="fa-solid fa-building-columns icono-transferencia"></i>
+              <div>
+                <p class="transferencia-titulo">Transferencia bancaria</p>
+                <p class="transferencia-desc">Recibirás los datos bancarios por email una vez confirmada la reserva.
+                  Tenés 24 hs para realizarla.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="columna-resumen">
+
+        <section class="tarjeta-resumen">
+          <h2>Resumen de tu reserva</h2>
+
+          <div class="resumen-vuelo">
+            <div class="resumen-tramo">
+              <div class="encabezado-tramo">
+                <span class="etiqueta-vuelo">IDA</span>
+                <span class="resumen-aerolinea">Aerolíneas Argentinas</span>
+              </div>
+              <div class="resumen-ruta">
+                <div class="resumen-punto">
+                  <span class="resumen-codigo">BUE</span>
+                  <span class="resumen-hora">00:50</span>
+                </div>
+                <div class="resumen-trayecto">
+                  <span class="resumen-duracion">13h</span>
+                  <div class="resumen-linea">
+                    <span class="resumen-punto-escala"></span>
+                  </div>
+                  <span class="resumen-escalas">1 Escala · Lima</span>
+                </div>
+                <div class="resumen-punto">
+                  <span class="resumen-codigo">MAD</span>
+                  <span class="resumen-hora">15:50</span>
+                </div>
+              </div>
+              <p class="resumen-fecha"><i class="fa-regular fa-calendar"></i> Jue 15 de mayo, 2026</p>
+            </div>
+          </div>
+
+          <hr class="separador" />
+
+          <div class="resumen-pasajeros">
+            <h3><i class="fa-solid fa-users"></i> Pasajeros</h3>
+            <p>1 adulto · Clase Económica</p>
+          </div>
+
+          <hr class="separador" />
+
+          <div class="resumen-desglose">
+            <h3>Desglose de precio</h3>
+            <div class="desglose-linea">
+              <span>Tarifa base</span>
+              <span>890 USD</span>
+            </div>
+            <div class="desglose-linea">
+              <span>Equipaje en cabina</span>
+              <span>25 USD</span>
+            </div>
+            <div class="desglose-linea">
+              <span>Equipaje en bodega</span>
+              <span>50 USD</span>
+            </div>
+            <div class="desglose-linea">
+              <span>Impuestos y tasas</span>
+              <span>120 USD</span>
+            </div>
+            <div class="desglose-total">
+              <span>Total</span>
+              <span>1.085 USD</span>
+            </div>
+          </div>
+
+          <div class="resumen-politicas">
+            <div class="elemento-politica">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Cancelación gratuita antes de las 24 hs.</span>
+            </div>
+            <div class="elemento-politica">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Cambios sujetos a disponibilidad.</span>
+            </div>
+          </div>
+
+          <button type="submit" form="formulario-checkout" class="btn-confirmar">
+            <i class="fa-solid fa-lock"></i> Confirmar y pagar
+          </button>
+
+          <p class="resumen-seguro">
+            <i class="fa-solid fa-shield-halved"></i> Pago 100% seguro y encriptado
+          </p>
+        </section>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>FlyNow</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="#">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" id="email-newsletter" name="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="#">política de privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de FlyNow</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li><a href="#"><img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" /></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con FlyNow.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 FlyNow. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>

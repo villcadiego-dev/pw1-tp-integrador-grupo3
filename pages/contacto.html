@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlyNow - Contacto</title>
+  <meta name="description" content="Contactate con FlyNow. Encontrá todos nuestros canales de atención y envianos tu consulta." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/contacto.css" />
+</head>
+<body>
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
+
+      <a href="./inicio.html" class="brand">
+        <i class="fa-solid fa-plane"></i>
+        <span>FlyNow</span>
+      </a>
+
+      <ul class="utility-nav">
+        <li class="hide-mobile"><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+        <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li class="hide-mobile"><a href="#">Registrarse</a></li>
+        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
+        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html">Vuelos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="./contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portada-contacto">
+      <div class="contenido-portada-contacto">
+        <i class="fa-solid fa-headset icono-portada-contacto"></i>
+        <h1>¿En qué podemos ayudarte?</h1>
+        <p>Nuestro equipo está disponible para asistirte en todo lo que necesités relacionado con tu viaje.</p>
+      </div>
+    </section>
+
+    <section class="seccion-canales">
+      <h2 class="titulo-canales">Nuestros canales de atención</h2>
+
+      <div class="grilla-canales">
+
+        <div class="tarjeta-canal">
+          <div class="canal-icono">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <h3>Teléfono</h3>
+          <p class="canal-detalle">0800-222-FLYNOW</p>
+          <p class="canal-horario"><i class="fa-regular fa-clock"></i> Lun a Vie · 08:00 a 20:00</p>
+          <a href="tel:08002223596669" class="enlace-canal">Llamar ahora</a>
+        </div>
+
+        <div class="tarjeta-canal">
+          <div class="canal-icono">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p class="canal-detalle">+54 11 4567-8900</p>
+          <p class="canal-horario"><i class="fa-regular fa-clock"></i> Lun a Dom · 09:00 a 18:00</p>
+          <a href="#" class="enlace-canal">Abrir chat</a>
+        </div>
+
+        <div class="tarjeta-canal">
+          <div class="canal-icono">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p class="canal-detalle">contacto@flynow.com.ar</p>
+          <p class="canal-horario"><i class="fa-regular fa-clock"></i> Respuesta en 24-48 hs</p>
+          <a href="mailto:contacto@flynow.com.ar" class="enlace-canal">Enviar email</a>
+        </div>
+
+        <div class="tarjeta-canal">
+          <div class="canal-icono">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3>Oficina central</h3>
+          <p class="canal-detalle">Av. Corrientes 1234, CABA</p>
+          <p class="canal-horario"><i class="fa-regular fa-clock"></i> Lun a Vie · 09:00 a 17:00</p>
+          <a href="#" class="enlace-canal">Ver en mapa</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="seccion-principal">
+
+      <div class="contenedor-formulario">
+        <h2><i class="fa-solid fa-paper-plane"></i> Envianos tu consulta</h2>
+        <p class="descripcion-formulario">Completá el formulario y nos pondremos en contacto a la brevedad.</p>
+
+        <form class="formulario-contacto" action="#" method="post">
+          <div class="fila-campos">
+            <div class="grupo-campo">
+              <label for="contacto-nombre">Nombre</label>
+              <input type="text" id="contacto-nombre" name="nombre" placeholder="Ej: María" required />
+            </div>
+            <div class="grupo-campo">
+              <label for="contacto-apellido">Apellido</label>
+              <input type="text" id="contacto-apellido" name="apellido" placeholder="Ej: González" required />
+            </div>
+          </div>
+
+          <div class="fila-campos">
+            <div class="grupo-campo">
+              <label for="contacto-email">Correo electrónico</label>
+              <input type="email" id="contacto-email" name="email" placeholder="ejemplo@correo.com" required />
+            </div>
+            <div class="grupo-campo">
+              <label for="contacto-telefono">Teléfono <span class="opcional">(opcional)</span></label>
+              <input type="tel" id="contacto-telefono" name="telefono" placeholder="+54 11 1234 5678" />
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="contacto-tipo">Tipo de consulta</label>
+            <select id="contacto-tipo" name="tipo">
+              <option value="">Seleccioná una opción</option>
+              <option value="reservas">Reservas y tickets</option>
+              <option value="equipaje">Equipaje</option>
+              <option value="cancelacion">Cancelaciones y cambios</option>
+              <option value="checkin">Check-in</option>
+              <option value="reembolso">Reembolsos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="contacto-nro-reserva">Número de reserva <span class="opcional">(si aplica)</span></label>
+            <input type="text" id="contacto-nro-reserva" name="reserva" placeholder="Ej: ABC123" maxlength="6" />
+          </div>
+
+          <div class="grupo-campo">
+            <label for="contacto-mensaje">Mensaje</label>
+            <textarea id="contacto-mensaje" name="mensaje" rows="5" placeholder="Describí tu consulta con el mayor detalle posible..." required></textarea>
+          </div>
+
+          <button type="submit" class="boton-enviar">
+            <i class="fa-solid fa-paper-plane"></i> Enviar consulta
+          </button>
+        </form>
+      </div>
+
+      <div class="contenedor-flybot">
+        <div class="encabezado-flybot">
+          <div class="avatar-flybot">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="datos-flybot">
+            <p class="nombre-flybot">FlyBot</p>
+            <p class="estado-flybot"><span class="punto-estado"></span> En línea</p>
+          </div>
+          <span class="insignia-flybot">IA</span>
+        </div>
+
+        <div class="chat-flybot">
+          <div class="mensaje-chat bot">
+            <div class="burbuja-chat">
+              👋 ¡Hola! Soy <strong>FlyBot</strong>, el asistente virtual de FlyNow. ¿En qué puedo ayudarte hoy?
+            </div>
+            <span class="chat-hora">09:02</span>
+          </div>
+        </div>
+
+        <div class="area-entrada-flybot">
+          <input
+            type="text"
+            class="campo-mensaje-flybot"
+            placeholder="Escribí tu consulta..."
+            disabled
+          />
+          <button class="boton-enviar-flybot" disabled>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+
+        <p class="aviso-flybot">
+          <i class="fa-solid fa-circle-info"></i>
+          FlyBot es un asistente virtual. Para consultas complejas, usá el formulario o contactá a un agente.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>FlyNow</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="#">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" id="email-newsletter" name="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="#">política de privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de FlyNow</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li><a href="#"><img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" /></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con FlyNow.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 FlyNow. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

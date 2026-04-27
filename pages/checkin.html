@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlyNow - Check-in Online</title>
+  <meta name="description" content="Realizá tu check-in online en FlyNow. Ingresá tu código de reserva y apellido para acceder a tu tarjeta de embarque." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/checkin.css" />
+</head>
+<body>
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
+
+      <a href="./inicio.html" class="brand">
+        <i class="fa-solid fa-plane"></i>
+        <span>FlyNow</span>
+      </a>
+
+      <ul class="utility-nav">
+        <li class="hide-mobile"><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+        <li><a href="./checkin.html" class="active"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li class="hide-mobile"><a href="#">Registrarse</a></li>
+        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
+        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html">Vuelos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portada">
+      <div class="contenido-portada">
+        <i class="fa-regular fa-circle-check icono-portada"></i>
+        <h1>Check-in Online</h1>
+        <p>Ahorrá tiempo en el aeropuerto. Realizá tu check-in desde donde estés y descargá tu tarjeta de embarque.</p>
+      </div>
+    </section>
+
+    <section class="seccion-formulario">
+      <div class="tarjeta-busqueda">
+        <h2><i class="fa-solid fa-magnifying-glass"></i> Buscá tu reserva</h2>
+        <p class="descripcion-tarjeta">Ingresá los datos de tu reserva para continuar con el check-in.</p>
+
+        <form class="formulario-busqueda" action="#" method="get">
+          <div class="tipo-busqueda">
+            <div class="opcion-tipo">
+              <input type="radio" name="busqueda-tipo" id="por-codigo" value="codigo" checked />
+              <label for="por-codigo">Código de reserva</label>
+            </div>
+            <div class="opcion-tipo">
+              <input type="radio" name="busqueda-tipo" id="por-ticket" value="ticket" />
+              <label for="por-ticket">Número de ticket</label>
+            </div>
+          </div>
+
+          <div class="campos-busqueda">
+            <div class="grupo-campo">
+              <label for="codigo-reserva">
+                <i class="fa-solid fa-hashtag"></i> Código de reserva (PNR)
+              </label>
+              <input
+                type="text"
+                id="codigo-reserva"
+                name="pnr"
+                placeholder="Ej: ABC123"
+                maxlength="6"
+              />
+              <span class="ayuda-campo">6 caracteres que encontrás en tu correo de confirmación.</span>
+            </div>
+
+            <div class="grupo-campo">
+              <label for="apellido-checkin">
+                <i class="fa-solid fa-user"></i> Apellido del pasajero
+              </label>
+              <input
+                type="text"
+                id="apellido-checkin"
+                name="apellido"
+                placeholder="Ej: González"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="boton-continuar">
+            <i class="fa-solid fa-arrow-right"></i> Continuar con el check-in
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="seccion-informacion">
+      <h2 class="titulo-informacion">¿Cuándo puedo hacer el check-in?</h2>
+
+      <div class="grilla-informacion">
+        <div class="tarjeta-informacion">
+          <div class="icono-informacion">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <h3>Apertura</h3>
+          <p>El check-in online abre <strong>48 horas antes</strong> del despegue de tu vuelo.</p>
+        </div>
+
+        <div class="tarjeta-informacion">
+          <div class="icono-informacion">
+            <i class="fa-solid fa-hourglass-end"></i>
+          </div>
+          <h3>Cierre</h3>
+          <p>El check-in online cierra <strong>2 horas antes</strong> de la salida del vuelo.</p>
+        </div>
+
+        <div class="tarjeta-informacion">
+          <div class="icono-informacion">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <h3>Tarjeta de embarque</h3>
+          <p>Descargá tu pase de abordar en formato <strong>PDF o digital</strong> para tu teléfono.</p>
+        </div>
+
+        <div class="tarjeta-informacion">
+          <div class="icono-informacion">
+            <i class="fa-solid fa-suitcase"></i>
+          </div>
+          <h3>Equipaje en bodega</h3>
+          <p>Si llevás equipaje facturado, presentate en el mostrador de <strong>Drop-off</strong> en el aeropuerto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-requisitos">
+      <div class="contenido-requisitos">
+        <h2><i class="fa-solid fa-circle-info"></i> Requisitos para embarcar</h2>
+        <ul class="requisitos-lista">
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <span>Documento de identidad vigente (DNI o Pasaporte según destino).</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <span>Tarjeta de embarque impresa o en tu dispositivo móvil.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <span>Presentarte en la puerta de embarque con al menos <strong>30 minutos</strong> de anticipación.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <span>Equipaje de mano dentro de las medidas permitidas por la aerolínea.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-check"></i>
+            <span>Visa o documentación migratoria si el destino lo requiere.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>FlyNow</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="#">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" id="email-newsletter" name="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="#">política de privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de FlyNow</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li><a href="#"><img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" /></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con FlyNow.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 FlyNow. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

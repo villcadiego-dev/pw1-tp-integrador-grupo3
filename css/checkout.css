@@ -1,1 +1,617 @@
 /* Estilos específicos de la Vista Checkout. */
+
+.principal-checkout {
+  max-width: 1200px;
+  margin: var(--space-xl) auto;
+  padding: 0 var(--space-xl);
+}
+
+.progreso-pasos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: var(--space-xl);
+}
+
+.paso-progreso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.circulo-paso {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.paso-progreso.completado .circulo-paso {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.paso-progreso.activo .circulo-paso {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 0 0 4px var(--color-primary-bg);
+}
+
+.etiqueta-paso {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.paso-progreso.activo .etiqueta-paso,
+.paso-progreso.completado .etiqueta-paso {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.linea-progreso {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  max-width: 100px;
+  margin-bottom: 18px;
+}
+
+.linea-progreso.completada {
+  background: var(--color-primary);
+}
+
+.diseno-checkout {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.columna-formularios {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.columna-resumen {
+  flex: 0 0 340px;
+  position: sticky;
+  top: var(--space-lg);
+}
+
+.tarjeta-seccion {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.tarjeta-seccion h2 {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.formulario-pasajero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.fila-campos {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.grupo-campo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.grupo-campo.ancho-completo {
+  flex: 1 1 100%;
+}
+
+.grupo-campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.grupo-campo input,
+.grupo-campo select {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.grupo-campo input:focus,
+.grupo-campo select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(27, 77, 126, 0.1);
+}
+
+.campo-con-icono {
+  position: relative;
+}
+
+.campo-con-icono input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.icono-marca {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  color: var(--color-primary-light);
+}
+
+.ayuda-cvv {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  cursor: help;
+}
+
+.equipaje-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.equipaje-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.equipaje-item.incluido {
+  background: var(--color-primary-bg);
+  border-color: var(--color-primary-light);
+}
+
+.equipaje-item.seleccionable {
+  cursor: pointer;
+}
+
+.equipaje-item.seleccionable:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-bg);
+}
+
+.equipaje-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.equipaje-item.incluido .equipaje-icono {
+  background: var(--color-primary-light);
+}
+
+.equipaje-info {
+  flex: 1;
+}
+
+.equipaje-nombre {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.equipaje-desc {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.etiqueta-incluido {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-bg);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-sm);
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+.equipaje-precio-check {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-xs);
+}
+
+.equipaje-precio {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.check-equipaje {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.opciones-pago {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.opcion-pago {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.opcion-pago.activa {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.opcion-pago:hover:not(.activa) {
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.contenido-pago {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contenido-pago + .contenido-pago {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.vista-previa-tarjeta {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  color: var(--color-on-primary);
+  min-height: 120px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(27, 77, 126, 0.3);
+}
+
+.chip-tarjeta {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  opacity: 0.85;
+}
+
+.numero-vista-previa {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.pie-tarjeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.transferencia-info {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.icono-transferencia {
+  font-size: 2rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.transferencia-titulo {
+  font-weight: 700;
+  margin: 0 0 var(--space-xs);
+  color: var(--color-primary);
+}
+
+.transferencia-desc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.tarjeta-resumen {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.tarjeta-resumen h2 {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.encabezado-tramo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.etiqueta-vuelo {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--color-primary-light);
+  background: var(--color-primary-bg);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+}
+
+.resumen-aerolinea {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.resumen-ruta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.resumen-punto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resumen-codigo {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.resumen-hora {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.resumen-trayecto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resumen-duracion,
+.resumen-escalas {
+  font-size: 0.72rem;
+  color: var(--color-primary-light);
+}
+
+.resumen-linea {
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary-light);
+  position: relative;
+  margin: 4px 0;
+}
+
+.resumen-punto-escala {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: var(--color-primary-light);
+  border-radius: 50%;
+  top: -2.5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.resumen-fecha {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.resumen-fecha i {
+  color: var(--color-primary-light);
+}
+
+.resumen-pasajeros h3 {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.resumen-pasajeros p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.resumen-desglose h3 {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.desglose-linea {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.desglose-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.resumen-politicas {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.elemento-politica {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.elemento-politica i {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.separador {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-md) 0;
+}
+
+.btn-confirmar {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background: var(--color-primary-light);
+}
+
+.btn-confirmar:active {
+  transform: scale(0.99);
+}
+
+.resumen-seguro {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  margin: var(--space-sm) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.resumen-seguro i {
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .diseno-checkout {
+    flex-direction: column;
+  }
+
+  .columna-resumen {
+    flex: 1 1 auto;
+    width: 100%;
+    position: static;
+  }
+
+  .linea-progreso {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .principal-checkout {
+    padding: 0 var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .fila-campos {
+    flex-direction: column;
+  }
+
+  .etiqueta-paso {
+    font-size: 0.65rem;
+  }
+}
