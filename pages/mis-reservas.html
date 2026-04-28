@@ -9,10 +9,235 @@
   <link rel="stylesheet" href="../css/mis-reservas.css" />
 </head>
 <body>
-  <header class="site-header"></header>
+ <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
 
-  <main></main>
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
 
-  <footer class="site-footer"></footer>
+      <a href="./inicio.html" class="brand">
+        <i class="fa-solid fa-plane"></i>
+        <span>FlyNow</span>
+      </a>
+
+      <ul class="utility-nav">
+        <li><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+        <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li><a href="./login.html">Iniciar sesión</a></li>
+        <li><a href="./registro.html">Registrarse</a></li>
+        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html"  class="active">Vuelos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main class="container-reservas">
+
+  <!-- Sidebar -->
+  <aside class="aside">
+    <h3>Perfil</h3>
+    <ul>
+      <li>Información Personal</li>
+      <li class="activo">Mis Vuelos Reservados</li>
+    </ul>
+  </aside>
+
+  <!-- Contenido -->
+  <section class="mis-reservas">
+    <div class="reservas">
+      <h2>Mis Vuelos Reservados</h2>
+      <h2 class="precio">$550 USD<span class="flecha">▲</span></h2>
+    </div>
+
+    <!-- Reserva 1 -->
+    <details class="acordeon-reserva" open>
+      <summary>
+        <span>Buenos Aires → Madrid (MAD)</span>
+      </summary>
+
+      <div class="detalle-vuelo">
+
+        <p class="fecha">10/08/2024 - 20/08/2024</p>
+
+        <!-- Ida -->
+        <div class="tarjeta-vuelo">
+          <div class="columna-ruta">
+
+          <!-- Arriba -->
+          <div class="reservas">
+            <span class="codigo">Buenos Aires (BUE) - (MAD)</span>
+            <span class="precio">$550 USD</span>
+          </div>
+
+          <!-- Abajo -->
+          <div class="fila-vuelo">
+            <div class="punto">
+              <span>12:00</span>
+            </div>
+
+            <div class="trayecto">
+              <div class="linea-tiempo"></div>
+              <span class="duracion">2h 15m</span>
+            </div>
+
+            <div class="punto">
+              <span>08:40 10/08/2024 (+1)</span>
+            </div>
+          </div>
+          </div>
+
+        </div>
+       <div class="tarjeta-vuelo">
+        <div class="columna-ruta">
+
+          <!-- Arriba -->
+        <div class="reservas">
+          <span class="codigo">Vuelta (MAD) - Buenos Aires (BUE)</span>
+          <span class="precio">$550 USD</span>
+        </div>
+          <!-- Abajo -->
+          <div class="fila-vuelo">
+            <div class="punto">
+              <span>18:30</span>
+            </div>
+
+            <div class="trayecto">
+              <div class="linea-tiempo"></div>
+              <span class="duracion">2h 15m</span>
+            </div>
+
+            <div class="punto">
+              <span>06:40 20/08/2024  (+1)</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </details>
+
+    <!-- Reserva 2 -->
+    <details class="acordeon-reserva">
+      <summary>
+        <span>New York → Paris</span>
+        <span class="precio">$620 USD<span class="flecha">▼</span></span>
+      </summary>
+    </details>
+
+    <!-- Reserva 3 -->
+    <details class="acordeon-reserva">
+      <summary>
+        <span>Barcelona → Rome</span>
+        <span class="precio">$280 USD <span class="flecha">▼</span> </span>
+      </summary>
+    </details>
+
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>FlyNow</h4>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="#">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input
+            type="email"
+            id="email-newsletter"
+            name="email"
+            placeholder="Tu email"
+            required
+          />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="#">política de privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de FlyNow</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" />
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con FlyNow.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 FlyNow. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

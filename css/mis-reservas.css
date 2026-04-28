@@ -1,1 +1,114 @@
 /* Estilos específicos de la Vista Mis reservas. */
+/* Layout */
+.container-reservas {
+  display: flex;
+  gap: 1.5%;
+  padding: 2rem;
+  margin-top: var(--space-lg);
+}
+
+.reservas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mis-reservas {
+  flex: 1;
+  background: var(--color-primary-bg);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+/* Sidebar */
+.aside ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.aside li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.aside li.activo {
+  background: var(--color-primary-bg);
+  border-radius: var(--radius-sm);
+  font-weight: bold;
+}
+
+/* Accordion */
+.acordeon-reserva {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.acordeon-reserva summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acordeon-reserva .precio {
+  color: var(--color-text);
+}
+
+.detalle-vuelo {
+  padding: 1rem;
+  background: #fafafa;
+}
+
+/* reutilizamos tu tarjeta */
+.tarjeta-vuelo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* ruta */
+.columna-ruta {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.fila-vuelo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trayecto {
+  text-align: center;
+}
+
+.linea-tiempo {
+  height: 2px;
+  background: var(--color-primary-light);
+  margin: 5px 0;
+}
+
+.codigo {
+  font-weight: bold;
+}
+
+.duracion {
+  font-size: 0.75rem;
+  color: var(--color-primary-light);
+}
+
+/* precio */
+.columna-precio .valor {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
