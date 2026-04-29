@@ -4,7 +4,7 @@
   background-color: var(--color-primary-bg);
   background-image:
     linear-gradient(to bottom, transparent 60%, var(--color-bg) 100%),
-    url('../assets/images/background-cloud.webp');
+    url('../assets/images/background-cloud.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
