@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruta 3 Vuelos - Iniciar Sesión</title>
+    <title>FlyNow - Registro</title>
     <link rel="icon" type="image/png" href="../assets/images/Header.PNG">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="../css/base.css" />
-  <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <main class="login-container">
         <section class="login-card">
-            <header class="login-header">
-                <div class="logo">Ruta 3 Vuelos</div>
-                <h1>¡Hola de nuevo!</h1>
-                <p>Ingresa a tu cuenta para gestionar tus vuelos.</p>
-            </header>
+            <article class="login-header">
+                <div class="logo">FlyNow</div>
+                <h1>Crea tu cuenta</h1>
+                <p>Únete a nosotros y empieza a planificar tu próximo viaje.</p>
+            </article>
 
             <form action="#" class="login-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <div class="input-icon">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="name" placeholder="Juan" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Apellido</label>
+                    <div class="input-icon">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="fullname" placeholder="Perez" required>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
                     <div class="input-icon">
@@ -33,22 +49,21 @@
                     <label for="password">Contraseña</label>
                     <div class="input-icon">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="password" placeholder="••••••••" required>
+                        <input type="password" id="password" placeholder="Crea una contraseña" required>
                     </div>
                 </div>
 
                 <div class="form-options">
                     <label class="remember-me">
-                        <input type="checkbox"> Recordarme
+                        <input type="checkbox" required> Acepto los términos y condiciones
                     </label>
-                    <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
                 </div>
 
-                <button type="submit" class="btn-login">Iniciar Sesión</button>
+                <button type="submit" class="btn-login">Registrarse</button>
             </form>
 
             <footer class="login-footer">
-                <p>¿No tienes una cuenta? <a href="./registro.html">Regístrate aquí</a></p>
+                <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
             </footer>
         </section>
     </main>
