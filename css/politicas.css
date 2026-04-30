@@ -2,3 +2,9 @@
     width: 80%;
     margin: var(--space-xl) auto;
 }
+
+.back-to-top {
+    display: inline-block;
+    margin-top: var(--space-xl);
+    text-decoration: none;
+}
