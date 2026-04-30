@@ -54,7 +54,10 @@
 
 .brand {
   display: flex;
+  width: 38%;
+  height: auto;
   align-items: center;
+  justify-content: flex-start;
   gap: var(--space-sm);
   font-size: 1.75rem;
   font-weight: 700;
