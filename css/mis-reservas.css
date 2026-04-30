@@ -1,10 +1,12 @@
 /* Estilos específicos de la Vista Mis reservas. */
 /* Layout */
 .container-reservas {
-  display: flex;
-  gap: 1.5%;
-  padding: 2rem;
-  margin-top: var(--space-lg);
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+    margin: var(--space-xl) auto;
+    padding: 0 20px;
+    min-height: 70vh;
 }
 
 .reservas {
