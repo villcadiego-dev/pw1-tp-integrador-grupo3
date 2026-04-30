@@ -72,6 +72,11 @@
   background-color: var(--color-bg);
 }
 
+.field input:user-invalid,
+.field select:user-invalid {
+  border-color: var(--color-alerta);
+}
+
 .btn-primary {
   display: block;
   width: 100%;
