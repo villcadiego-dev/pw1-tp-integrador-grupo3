@@ -4,6 +4,7 @@
     width: 80%;
     margin: var(--space-xl) auto;
     padding: 0 20px;
+    min-height: 60vh;
 }
 
 .account-sidebar {

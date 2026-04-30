@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ruta 3 Vuelos - Mis reservas</title>
   <link rel="icon" type="image/png" href="../assets/images/Header.PNG">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/mis-reservas.css" />
+  <link rel="stylesheet" href="../css/micuenta.css" />
 </head>
 <body>
  <header class="site-header">
@@ -47,13 +50,16 @@
   <main class="container-reservas">
 
   <!-- Sidebar -->
-  <aside class="aside">
-    <h3>Perfil</h3>
-    <ul>
-      <li>Información Personal</li>
-      <li class="activo">Mis Vuelos Reservados</li>
-    </ul>
-  </aside>
+    <aside class="account-sidebar">
+        <div class="user-info">
+        <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+        <h3>María</h3>
+        </div>
+        <nav class="account-nav">
+        <a href="./mis-reservas.html"><i class="fa-solid fa-plane"></i> Mis Reservas</a>
+        <a href="./micuenta.html"><i class="fa-solid fa-user"></i> Información personal</a>
+        </nav>
+    </aside>
 
   <!-- Contenido -->
   <section class="mis-reservas">
