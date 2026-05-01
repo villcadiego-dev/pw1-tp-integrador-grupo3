@@ -4,33 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruta 3 Vuelos - Preguntas Frecuentes</title>
+  <title>Ruta 3 Vuelos - Centro de Ayuda</title>
   <link rel="icon" type="image/png" href="../assets/images/Header.PNG">
-  <meta name="description" content="Realizá tu check-in online en FlyNow. Ingresá tu código de reserva y apellido para acceder a tu tarjeta de embarque." />
+  <meta name="description"
+    content="Centro de ayuda de Ruta 3 Vuelos. Encontrá respuestas a tus preguntas sobre reservas, vuelos, equipaje y más." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/vistas-info.css" />
+  <link rel="stylesheet" href="../css/ayuda.css" />
 </head>
 
 <body>
- <header class="site-header">
+  <header class="site-header">
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
     <div class="header-top">
       <label for="nav-toggle" class="nav-toggle-label">
         <i class="fa-solid fa-bars icon-open"></i>
         <i class="fa-solid fa-xmark icon-close"></i>
       </label>
+
       <a href="./inicio.html" class="brand">
         <img src="..//assets/images/Logo.png" alt="Ruta 3 Vuelos" class="brand">
       </a>
+
       <ul class="utility-nav">
         <li class="hide-mobile"><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a>
+        </li>
         <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li class="hide-mobile"><a href="./registro.html">Registrarse</a></li>
+        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
         <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
       </ul>
     </div>
+
     <nav class="main-nav">
       <ul>
         <li><a href="./inicio.html">Inicio</a></li>
@@ -41,66 +51,79 @@
     </nav>
   </header>
 
-  <main class="principal-contenido">
-    <section class="tarjeta-seccion">
-      <h2 style="color: var(--color-primary); margin-bottom: var(--space-lg);">
-        <i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes
-      </h2>
+  <main>
 
-      <div class="faq-lista">
+    <!-- Portada -->
+    <section class="portada-ayuda">
+      <div class="contenido-portada-ayuda">
+        <i class="fa-solid fa-circle-question icono-portada-ayuda"></i>
+        <h1>Centro de Ayuda</h1>
+        <p>Encontrá respuestas rápidas a tus preguntas más frecuentes.</p>
+      </div>
+    </section>
 
-        <details class="faq-item">
-          <summary class="faq-pregunta">
-            ¿Cómo realizo el Check-in online?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-respuesta">
-            <p>Puedes realizarlo desde nuestra web o app desde 48 horas hasta 2 horas antes de la salida de tu vuelo. Solo necesitas tu código de reserva y apellido.</p>
+    <!-- Categorías de ayuda -->
+    <section class="seccion-categorias principal-contenido">
+      <h2 class="titulo-seccion-ayuda">¿En qué podemos ayudarte?</h2>
+      <div class="grilla-categorias">
+
+        <a href="./FAQ.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-solid fa-ticket"></i>
           </div>
-        </details>
+          <h3>Reservas y vuelos</h3>
+          <p>Cómo reservar, modificar o cancelar tu vuelo. Información sobre cambios y devoluciones.</p>
+          <span class="categoria-enlace">Ver más <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <details class="faq-item">
-          <summary class="faq-pregunta">
-            ¿Cuál es el peso permitido para el equipaje de mano?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-respuesta">
-            <p>Todas nuestras tarifas incluyen un bolso de mano de hasta 10kg que debe caber debajo del asiento delantero (medidas máx: 45x35x20 cm).</p>
+        <a href="./checkin.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-regular fa-circle-check"></i>
           </div>
-        </details>
+          <h3>Check-in online</h3>
+          <p>Hacé tu check-in desde casa y descargá tu tarjeta de embarque en pocos pasos.</p>
+          <span class="categoria-enlace">Ver más <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <details class="faq-item">
-          <summary class="faq-pregunta">
-            ¿Puedo viajar con mi mascota?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-respuesta">
-            <p>Sí, permitimos perros y gatos pequeños en cabina. Debes reservar el servicio con al menos 48hs de anticipación ya que el cupo por vuelo es limitado.</p>
+        <a href="./equipaje.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-solid fa-suitcase-rolling"></i>
           </div>
-        </details>
+          <h3>Equipaje</h3>
+          <p>Medidas y pesos permitidos, equipaje adicional, artículos especiales y restricciones.</p>
+          <span class="categoria-enlace">Ver más <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <details class="faq-item">
-          <summary class="faq-pregunta">
-            ¿Qué documentos necesito para vuelos internacionales?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-respuesta">
-            <p>Necesitarás pasaporte vigente y, dependiendo del destino, visa o permisos sanitarios. Te recomendamos revisar los requisitos de cada país antes de viajar.</p>
+        <a href="./mis-reservas.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-solid fa-file-invoice"></i>
           </div>
-        </details>
+          <h3>Mis reservas</h3>
+          <p>Consultá el estado de tus reservas, descargá comprobantes y gestioná tus vuelos.</p>
+          <span class="categoria-enlace">Ver más <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
-        <details class="faq-item">
-          <summary class="faq-pregunta">
-            ¿Cómo solicito una devolución o reembolso?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-respuesta">
-            <p>Las devoluciones dependen de la tarifa comprada. Puedes gestionarlas desde "Gestioná tu reserva" o contactando a nuestro centro de atención al cliente.</p>
+        <a href="./micuenta.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-solid fa-user-circle"></i>
           </div>
-        </details>
+          <h3>Mi cuenta</h3>
+          <p>Actualizá tus datos personales, preferencias de vuelo y métodos de pago.</p>
+          <span class="categoria-enlace">Ver más <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <a href="./contacto.html" class="tarjeta-categoria">
+          <div class="tarjeta-categoria__icono">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>Contactar soporte</h3>
+          <p>¿No encontrás lo que buscás? Nuestro equipo está disponible para ayudarte.</p>
+          <span class="categoria-enlace">Ir al contacto <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
 
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -126,7 +149,7 @@
       <div class="footer-col">
         <h4>Atención al cliente</h4>
         <ul>
-          <li><a href="./ayuda.html">Centro de ayuda</a></li>
+          <li><a href="./ayuda.html" class="active">Centro de ayuda</a></li>
           <li><a href="./contacto.html">Contacto</a></li>
           <li><a href="./equipaje.html">Equipaje</a></li>
         </ul>
@@ -144,7 +167,8 @@
         </form>
 
         <p class="newsletter-disclaimer">
-          Para más información, consultá nuestra <a href="./politicas-privacidad.html#marketing">política de privacidad</a>.
+          Para más información, consultá nuestra <a href="./politicas-privacidad.html#marketing">política de
+            privacidad</a>.
         </p>
       </section>
 
@@ -176,5 +200,6 @@
 
     <p class="copyright">© 2026 Ruta 3 Vuelos. Todos los derechos reservados.</p>
   </footer>
-  </body>
+</body>
+
 </html>

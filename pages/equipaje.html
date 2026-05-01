@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta 3 Vuelos - Información de Equipaje</title>
+  <link rel="icon" type="image/png" href="../assets/images/Header.PNG">
+  <meta name="description"
+    content="Conocé las políticas de equipaje de Ruta 3 Vuelos: medidas, pesos, equipaje adicional y artículos especiales." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/vistas-info.css" />
+  <link rel="stylesheet" href="../css/equipaje.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+    <div class="header-top">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <i class="fa-solid fa-bars icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </label>
+
+      <a href="./inicio.html" class="brand">
+        <img src="..//assets/images/Logo.png" alt="Ruta 3 Vuelos" class="brand">
+      </a>
+
+      <ul class="utility-nav">
+        <li class="hide-mobile"><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+        <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a>
+        </li>
+        <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+        <li class="hide-mobile"><a href="./registro.html">Registrarse</a></li>
+        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
+        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+      </ul>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="./inicio.html">Inicio</a></li>
+        <li><a href="./resultados.html">Vuelos</a></li>
+        <li><a href="./ofertas.html">Ofertas</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section class="portada-equipaje">
+      <div class="contenido-portada-equipaje">
+        <i class="fa-solid fa-suitcase-rolling icono-portada-equipaje"></i>
+        <h1>Información de Equipaje</h1>
+        <p>Todo lo que necesitás saber sobre medidas, pesos y políticas de equipaje.</p>
+      </div>
+    </section>
+
+    <div class="principal-contenido">
+
+      <!-- Tipos de equipaje -->
+      <section class="seccion-tipos-equipaje">
+        <h2 class="titulo-seccion-equipaje"><i class="fa-solid fa-layer-group"></i> Tipos de equipaje permitidos</h2>
+
+        <div class="grilla-tipos-equipaje">
+
+          <div class="tarjeta-tipo-equipaje">
+            <div class="tipo-equipaje__icono">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3>Artículo personal</h3>
+            <p class="tipo-equipaje__desc">Bolso, mochila pequeña o cartera que entra debajo del asiento delantero.</p>
+            <ul class="tipo-equipaje__specs">
+              <li><i class="fa-solid fa-ruler-combined"></i> Máx. 40 × 30 × 15 cm</li>
+              <li><i class="fa-solid fa-weight-hanging"></i> Hasta 5 kg</li>
+              <li><i class="fa-solid fa-check"></i> Incluido en todas las tarifas</li>
+            </ul>
+          </div>
+
+          <div class="tarjeta-tipo-equipaje tarjeta-tipo-equipaje--destacada">
+            <div class="tipo-equipaje__icono">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <h3>Equipaje de mano</h3>
+            <p class="tipo-equipaje__desc">Valija o mochila que va en el compartimiento superior del avión.</p>
+            <ul class="tipo-equipaje__specs">
+              <li><i class="fa-solid fa-ruler-combined"></i> Máx. 55 × 40 × 20 cm</li>
+              <li><i class="fa-solid fa-weight-hanging"></i> Hasta 10 kg</li>
+              <li><i class="fa-solid fa-check"></i> Incluido en tarifas Flex, Ejecutiva y Primera</li>
+            </ul>
+          </div>
+
+          <div class="tarjeta-tipo-equipaje">
+            <div class="tipo-equipaje__icono">
+              <i class="fa-solid fa-suitcase"></i>
+            </div>
+            <h3>Equipaje en bodega</h3>
+            <p class="tipo-equipaje__desc">Valija que se factura en el mostrador y viaja en la bodega del avión.</p>
+            <ul class="tipo-equipaje__specs">
+              <li><i class="fa-solid fa-ruler-combined"></i> Suma máx. 158 cm (largo + ancho + alto)</li>
+              <li><i class="fa-solid fa-weight-hanging"></i> Hasta 23 kg por pieza</li>
+              <li><i class="fa-solid fa-check"></i> Incluido en tarifas Ejecutiva y Primera</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Tabla de tarifas y equipaje -->
+      <section class="seccion-tabla-equipaje">
+        <h2 class="titulo-seccion-equipaje"><i class="fa-solid fa-table"></i> Equipaje según tarifa</h2>
+        <div class="contenedor-tabla">
+          <table class="tabla-equipaje">
+            <thead>
+              <tr>
+                <th>Tipo de equipaje</th>
+                <th><i class="fa-solid fa-tag"></i> Económica Básica</th>
+                <th><i class="fa-solid fa-tag"></i> Económica Flex</th>
+                <th><i class="fa-solid fa-tag"></i> Ejecutiva</th>
+                <th><i class="fa-solid fa-tag"></i> Primera</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Artículo personal (5 kg)</td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+              </tr>
+              <tr>
+                <td>Equipaje de mano (10 kg)</td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+              </tr>
+              <tr>
+                <td>Bodega 1 pieza (23 kg)</td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+              </tr>
+              <tr>
+                <td>Bodega 2 piezas (23 kg c/u)</td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-xmark icono-no"></i></td>
+                <td><i class="fa-solid fa-check icono-si"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota-tabla">* El equipaje adicional puede comprarse al momento de la reserva o hasta 24 hs antes del
+          vuelo.</p>
+      </section>
+
+      <!-- Artículos especiales -->
+      <section class="seccion-especiales">
+        <h2 class="titulo-seccion-equipaje"><i class="fa-solid fa-star"></i> Artículos especiales</h2>
+        <div class="grilla-especiales">
+
+          <div class="tarjeta-especial">
+            <i class="fa-solid fa-person-skiing"></i>
+            <h3>Equipamiento deportivo</h3>
+            <p>Skis, tablas de surf, bicicletas y equipos de buceo pueden transportarse previo aviso y con cargo
+              adicional.</p>
+          </div>
+
+          <div class="tarjeta-especial">
+            <i class="fa-solid fa-guitar"></i>
+            <h3>Instrumentos musicales</h3>
+            <p>Los instrumentos pequeños pueden viajar en cabina. Los grandes deben facturarse con embalaje adecuado.
+            </p>
+          </div>
+
+          <div class="tarjeta-especial">
+            <i class="fa-solid fa-paw"></i>
+            <h3>Mascotas</h3>
+            <p>Se aceptan mascotas pequeñas en cabina y en bodega según su tamaño, con requisitos sanitarios
+              específicos.</p>
+          </div>
+
+          <div class="tarjeta-especial">
+            <i class="fa-solid fa-baby-carriage"></i>
+            <h3>Cochecitos y sillas de bebé</h3>
+            <p>Se transportan de forma gratuita en bodega. El cochecito puede usarse hasta la puerta de embarque.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Artículos prohibidos -->
+      <section class="seccion-prohibidos">
+        <div class="contenido-requisitos">
+          <h2><i class="fa-solid fa-ban"></i> Artículos prohibidos</h2>
+          <ul class="requisitos-lista">
+            <li>
+              <i class="fa-solid fa-xmark" style="color: var(--color-alerta);"></i>
+              <span>Líquidos en recipientes de más de <strong>100 ml</strong> en equipaje de mano (exceptuando
+                medicamentos y alimentos para bebés).</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-xmark" style="color: var(--color-alerta);"></i>
+              <span>Materiales explosivos, inflamables o corrosivos en cualquier tipo de equipaje.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-xmark" style="color: var(--color-alerta);"></i>
+              <span>Baterías de litio de alta capacidad (más de 160 Wh) en bodega.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-xmark" style="color: var(--color-alerta);"></i>
+              <span>Armas de fuego sin declarar y sin autorización en el lugar de origen y destino.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-xmark" style="color: var(--color-alerta);"></i>
+              <span>Objetos cortopunzantes (tijeras, navajas, cuchillos) en el equipaje de mano.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Ruta 3 Vuelos</h4>
+        <ul>
+          <li><a href="./AboutUs.html">Sobre Nosotros</a></li>
+          <li><a href="./FAQ.html">Preguntas Frecuentes</a></li>
+          <li><a href="./politicas-privacidad.html">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./resultados.html">Vuelos</a></li>
+          <li><a href="./ofertas.html">Ofertas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="./ayuda.html">Centro de ayuda</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="./equipaje.html" class="active">Equipaje</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <section class="footer-bottom-section">
+        <h4>Suscribite a nuestras ofertas</h4>
+        <p>Recibí las mejores tarifas y promociones.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" id="email-newsletter" name="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirme</button>
+        </form>
+
+        <p class="newsletter-disclaimer">
+          Para más información, consultá nuestra <a href="./politicas-privacidad.html#marketing">política de
+            privacidad</a>.
+        </p>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>App de Ruta 3 Vuelos</h4>
+        <p>Reservá y gestioná tus vuelos donde estés.</p>
+
+        <ul class="app-stores">
+          <li><a href="#"><img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" /></a></li>
+          <li><a href="#"><img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" /></a></li>
+        </ul>
+      </section>
+
+      <section class="footer-bottom-section">
+        <h4>Seguinos</h4>
+        <p>Compartí tu experiencia con Ruta 3 Vuelos.</p>
+
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="copyright">© 2026 Ruta 3 Vuelos. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>
