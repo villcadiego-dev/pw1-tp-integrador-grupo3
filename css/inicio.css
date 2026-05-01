@@ -4,7 +4,7 @@
   background-color: var(--color-primary-bg);
   background-image:
     linear-gradient(to bottom, transparent 60%, var(--color-bg) 100%),
-    url('../assets/images/background-cloud.png');
+    url('../assets/images/background-hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +17,7 @@
   color: var(--color-on-primary);
   margin-bottom: var(--space-xl);
   font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .search-form {
@@ -130,12 +131,82 @@
   text-decoration: underline;
 }
 
+/* ── Secciones destacadas (Destinos populares, Beneficios) ── */
+.seccion-destacada {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.seccion-destacada--alt {
+  background-color: var(--color-surface);
+  max-width: none;
+}
+
+.seccion-destacada__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.seccion-destacada__header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-sm);
+}
+
+.seccion-destacada__header p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ── Grilla de beneficios ── */
+.grilla-beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tarjeta-beneficio {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: 0 2px 8px var(--color-shadow);
+}
+
+.icono-beneficio {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.tarjeta-beneficio h3 {
+  font-size: 1.125rem;
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text);
+}
+
+.tarjeta-beneficio p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   .form-grid {
     grid-template-columns: 1fr;
   }
 
   .campaign-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grilla-beneficios {
     grid-template-columns: 1fr;
   }
 }
