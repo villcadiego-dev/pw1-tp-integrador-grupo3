@@ -31,7 +31,7 @@
 
 .trip-type {
   display: flex;
-  gap: var(--space-lg);
+  gap: var(--space-sm);
   margin-bottom: var(--space-lg);
 }
 
@@ -39,7 +39,14 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   cursor: pointer;
+}
+
+.trip-type label:has(input:checked) {
+  border-color: var(--color-primary);
 }
 
 .form-grid {
@@ -95,7 +102,7 @@
 }
 
 .campaign {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: var(--space-xl) var(--space-md);
 }
@@ -111,11 +118,13 @@
   display: block;
   border-radius: var(--radius-md);
   overflow: hidden;
+  aspect-ratio: 16 / 7;
 }
 
 .campaign-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
