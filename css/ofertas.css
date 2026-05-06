@@ -1,38 +1,5 @@
 /* Estilos específicos de la Vista Ofertas. */
 
-/* ── Hero / Portada ── */
-.portada-ofertas {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: var(--space-xl);
-}
-
-.contenido-portada-ofertas {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.icono-portada-ofertas {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-  opacity: 0.9;
-}
-
-.portada-ofertas h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-  color: var(--color-on-primary);
-}
-
-.portada-ofertas p {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin: 0;
-  line-height: 1.6;
-}
-
 /* ── Grilla de tarjetas ── */
 .seccion-ofertas {
   padding: var(--space-xl);
@@ -188,10 +155,6 @@
 }
 
 @media (max-width: 600px) {
-  .portada-ofertas {
-    padding: var(--space-xl) var(--space-md);
-  }
-
   .seccion-ofertas {
     padding: var(--space-lg) var(--space-md);
   }

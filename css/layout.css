@@ -170,6 +170,45 @@ html {
   }
 }
 
+/* Banner superior de página */
+.portada {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.contenido-portada {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.icono-portada {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+.portada h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--color-on-primary);
+}
+
+.portada p {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .portada {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
 .site-footer {
   background-color: var(--color-surface);
   padding: var(--space-xl);

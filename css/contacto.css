@@ -1,37 +1,5 @@
 /* Estilos específicos de la Vista Contacto. */
 
-.portada-contacto {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: var(--space-xl);
-}
-
-.contenido-portada-contacto {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.icono-portada-contacto {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-  opacity: 0.9;
-}
-
-.portada-contacto h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-  color: var(--color-on-primary);
-}
-
-.portada-contacto p {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin: 0;
-  line-height: 1.6;
-}
-
 .seccion-canales {
   background: var(--color-primary-bg);
   padding: var(--space-xl);
@@ -409,10 +377,6 @@
 }
 
 @media (max-width: 600px) {
-  .portada-contacto {
-    padding: var(--space-xl) var(--space-md);
-  }
-
   .seccion-canales,
   .seccion-principal {
     padding: var(--space-lg) var(--space-md);

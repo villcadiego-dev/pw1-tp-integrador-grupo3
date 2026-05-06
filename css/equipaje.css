@@ -1,38 +1,5 @@
 /* Estilos específicos de la Vista Equipaje. */
 
-/* ── Portada ── */
-.portada-equipaje {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: var(--space-xl);
-}
-
-.contenido-portada-equipaje {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.icono-portada-equipaje {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-  opacity: 0.9;
-}
-
-.portada-equipaje h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-  color: var(--color-on-primary);
-}
-
-.portada-equipaje p {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin: 0;
-  line-height: 1.6;
-}
-
 /* ── Título de sección reutilizable ── */
 .titulo-seccion-equipaje {
   font-size: 1.2rem;
@@ -220,10 +187,6 @@
 
 /* ── Responsivo ── */
 @media (max-width: 600px) {
-  .portada-equipaje {
-    padding: var(--space-lg) var(--space-md);
-  }
-
   .grilla-tipos-equipaje,
   .grilla-especiales {
     grid-template-columns: 1fr;

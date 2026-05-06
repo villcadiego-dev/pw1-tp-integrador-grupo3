@@ -1,38 +1,5 @@
 /* Estilos específicos de la Vista Centro de Ayuda. */
 
-/* ── Portada ── */
-.portada-ayuda {
-  background-color: var(--color-primary);
-  color: var(--color-on-primary);
-  text-align: center;
-  padding: var(--space-xl);
-}
-
-.contenido-portada-ayuda {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.icono-portada-ayuda {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-  opacity: 0.9;
-}
-
-.portada-ayuda h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: var(--space-sm);
-  color: var(--color-on-primary);
-}
-
-.portada-ayuda p {
-  font-size: 1rem;
-  opacity: 0.85;
-  margin: 0;
-  line-height: 1.6;
-}
-
 /* ── Categorías ── */
 .seccion-categorias {
   padding-bottom: 0;
@@ -246,7 +213,6 @@
 
 /* ── Responsivo ── */
 @media (max-width: 600px) {
-  .portada-ayuda,
   .seccion-preguntas-rapidas,
   .seccion-contacto-rapido {
     padding: var(--space-lg) var(--space-md);
