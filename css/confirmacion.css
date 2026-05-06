@@ -1,0 +1,45 @@
+.principal-checkout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.bloque-agradecimiento {
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.columna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icono-exito {
+    margin: 0 auto var(--space-lg);
+    width: 64px;
+    height: 64px;
+    font-size: 1.8rem;
+}
+
+.texto-secundario {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+    line-height: 1.6;
+}
+
+
+.btn-secundario-confirmar:hover {
+    background: var(--color-surface);
+    border-color: var(--color-primary-light);
+}
+
+@media (max-width: 600px) {
+    .principal-checkout {
+        min-height: auto;
+        padding: var(--space-xl) var(--space-md);
+    }
+}
