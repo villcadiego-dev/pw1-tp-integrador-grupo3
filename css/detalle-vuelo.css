@@ -179,3 +179,55 @@
   padding-top: 1rem;
   font-weight: bold;
 }
+
+@media (max-width: 900px) {
+  .wrapper-reserva {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .container-asientos {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .detalle-vuelo {
+    flex: none;
+    width: 100%;
+  }
+
+  .selector-asientos {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper-reserva {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .lado {
+    grid-template-columns: repeat(4, 1.5rem);
+    gap: 0.3rem;
+  }
+
+  .asiento {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .pasillo {
+    width: 1.25rem;
+  }
+
+  .leyenda {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .fila-vuelo {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

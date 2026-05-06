@@ -114,3 +114,37 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+@media (max-width: 900px) {
+  .container-reservas {
+    flex-direction: column;
+    width: 95%;
+    gap: 1rem;
+  }
+
+  .aside {
+    width: 100%;
+  }
+
+  .mis-reservas {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-reservas {
+    padding: 0;
+    margin: var(--space-md) auto;
+  }
+
+  .tarjeta-vuelo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .acordeon-reserva summary {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}

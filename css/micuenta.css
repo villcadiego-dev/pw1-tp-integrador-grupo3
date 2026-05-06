@@ -68,7 +68,37 @@
 
 .content-section p,
 .content-section ul {
-    color: var(--color-text);
-    line-height: 1.6;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .account-container {
+    flex-direction: column;
+    width: 95%;
+    gap: 1rem;
+  }
+
+  .account-sidebar {
+    flex: none;
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .account-content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .account-container {
+    margin: var(--space-md) auto;
+    padding: 0;
+  }
+
+  .account-content {
+    padding: 1rem;
+  }
 }
 

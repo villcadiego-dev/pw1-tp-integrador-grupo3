@@ -202,3 +202,79 @@
     justify-content: space-between;
     font-size: 0.75rem;
 }
+
+@media (max-width: 900px) {
+  .container-resultados {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .aside {
+    flex: none;
+    width: 100%;
+  }
+
+  .listado-vuelos {
+    flex: none;
+    width: 100%;
+  }
+
+  .detalles-seleccion {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-resultados {
+    padding: 0.75rem;
+  }
+
+  .tarjeta-vuelo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1rem;
+  }
+
+  .columna-aerolinea {
+    flex: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .columna-ruta {
+    width: 100%;
+  }
+
+  .columna-precio {
+    flex: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .action-precio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .action-precio .valor {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .boton-ver {
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .punto .codigo {
+    font-size: 0.95rem;
+  }
+}
