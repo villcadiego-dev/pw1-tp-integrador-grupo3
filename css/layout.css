@@ -116,7 +116,7 @@ html {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .header-top {
     padding: var(--space-md);
     gap: var(--space-sm);
@@ -336,7 +336,7 @@ html {
   font-size: 0.875rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .site-footer {
     padding: var(--space-lg) var(--space-md);
   }
