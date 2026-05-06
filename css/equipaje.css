@@ -29,12 +29,12 @@
   box-shadow: 0 2px 8px var(--color-shadow);
 }
 
-.tarjeta-tipo-equipaje--destacada {
+.tarjeta-tipo-equipaje-destacada {
   border-color: var(--color-primary-light);
   background-color: var(--color-primary-bg);
 }
 
-.tipo-equipaje__icono {
+.tipo-equipaje-icono {
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -53,14 +53,14 @@
   margin-bottom: var(--space-sm);
 }
 
-.tipo-equipaje__desc {
+.tipo-equipaje-desc {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   line-height: 1.6;
   margin-bottom: var(--space-md);
 }
 
-.tipo-equipaje__specs {
+.tipo-equipaje-specs {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
@@ -68,7 +68,7 @@
   padding-top: var(--space-md);
 }
 
-.tipo-equipaje__specs li {
+.tipo-equipaje-specs li {
   font-size: 0.83rem;
   color: var(--color-text);
   display: flex;
@@ -76,7 +76,7 @@
   gap: var(--space-sm);
 }
 
-.tipo-equipaje__specs i {
+.tipo-equipaje-specs i {
   color: var(--color-primary-light);
   width: 14px;
   flex-shrink: 0;
