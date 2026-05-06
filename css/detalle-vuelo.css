@@ -178,6 +178,26 @@
   border-top: 0.0625rem solid var(--color-border);
   padding-top: 1rem;
   font-weight: bold;
+  align-items: center;
+}
+
+.boton-checkout {
+  margin-left: auto;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.boton-checkout:hover {
+  background: var(--color-primary-light);
 }
 
 @media (max-width: 900px) {
