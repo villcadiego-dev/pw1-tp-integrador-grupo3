@@ -1,0 +1,123 @@
+/* Layout Principal */
+
+.listado-vuelos {
+    max-width: 50%;
+    margin: 0 auto;
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+/* Tarjeta de Vuelo */
+.tarjeta-vuelo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    gap: 20px;
+}
+
+.columna-aerolinea {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 120px;
+}
+
+.etiqueta-vuelo {
+    font-weight: bold;
+    color: var(--color-primary-light);
+}
+
+.nombre-aerolinea {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Columna Ruta y Línea de Tiempo */
+.columna-ruta {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.trayecto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duracion, .escalas {
+    font-size: 0.75rem;
+    color: var(--color-primary-light);
+}
+
+.linea-tiempo {
+    width: 100%;
+    height: 2px;
+    background: var(--color-primary-light);
+    margin: 8px 0;
+    position: relative;
+}
+
+.punto {
+    display: flex;
+    flex-direction: column;
+}
+
+.punto-escala {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary-light);
+    border-radius: 50%;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.punto .codigo {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Columna Precio y Acción */
+.columna-precio {
+    flex: 0 0 160px;
+    text-align: right;
+}
+
+.disponibilidad {
+    font-size: 0.75rem;
+    color: var(--color-alerta);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.action-precio .valor {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.boton-ver {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--space-lg);
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.boton-ver:hover {
+    background: var(--color-primary-light);
+}
+

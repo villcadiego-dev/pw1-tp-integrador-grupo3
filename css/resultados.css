@@ -38,8 +38,8 @@
 }
 
 .columna-aerolinea {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   flex: 0 0 120px;
 }
 
@@ -82,8 +82,8 @@
 }
 
 .punto {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .punto-escala {
@@ -130,6 +130,7 @@
   border-radius: var(--space-lg);
   font-weight: bold;
   cursor: pointer;
+  display: inline-block;
 }
 
 .boton-ver:hover {
@@ -148,7 +149,7 @@
 }
 
 .item-equipaje .nombre {
-    margin: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .item-equipaje.incluido {
@@ -156,9 +157,9 @@
 }
 
 .item-equipaje .estado {
-    font-size: 0.9rem;
-    color: var(--color-primary);
-    font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: bold;
 }
 
 .politica {
@@ -198,9 +199,9 @@
 }
 
 .rango-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 900px) {
