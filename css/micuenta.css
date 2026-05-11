@@ -61,7 +61,7 @@
 }
 
 
-.content-section h2 {
+h2 {
     margin-bottom: 1rem;
     color: var(--color-primary);
 }
@@ -70,6 +70,43 @@
 .content-section ul {
   color: var(--color-text);
   line-height: 1.6;
+}
+
+
+/* Recuperar contraseña */
+.btn-password {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.seguridad {
+  max-width: 50%;
+}
+
+a.btn-confirmar {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 14px;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  transition: border-color 0.3s;
 }
 
 @media (max-width: 900px) {
@@ -101,4 +138,3 @@
     padding: 1rem;
   }
 }
-

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruta 3 Vuelos - Recuperar Contraseña</title>
+    <link rel="icon" type="image/png" href="../assets/images/Header.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/micuenta.css" />
+</head>
+<body>
+    <header class="site-header">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        
+        <div class="header-top">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <i class="fa-solid fa-bars icon-open"></i>
+                <i class="fa-solid fa-xmark icon-close"></i>
+            </label>
+            
+            <a href="./inicio.html" class="brand">
+                <img src="../assets/images/Logo.png" alt="Ruta 3 Vuelos">
+            </a>
+            
+            <ul class="utility-nav">
+                <li><a href="#"><i class="fa-solid fa-globe"></i> Argentina | es</a></li>
+                <li><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a></li>
+                <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
+                <li><a href="./registro.html">Registrarse</a></li>
+                <li><a href="./login.html">Iniciar sesión</a></li>
+                <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+            </ul>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./inicio.html">Inicio</a></li>
+                <li><a href="./vuelos.html">Vuelos</a></li>
+                <li><a href="./ofertas.html">Ofertas</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="account-container">
+        <section class="account-content seguridad">
+            <article class="content-section">
+                <h2>Recuperar contraseña</h2>
+                <p>Ingresa tu dirección de email y te enviaremos un enlace para restablecer tu contraseña.</p>
+                <form>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <a class="btn-confirmar" href="login.html">Confirmar</a>
+                </form>
+            </article>
+        </section>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Ruta 3 Vuelos</h4>
+                <ul>
+                    <li><a href="./AboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="./FAQ.html">Preguntas Frecuentes</a></li>
+                    <li><a href="./politicas-privacidad.html">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="./inicio.html">Inicio</a></li>
+                    <li><a href="./vuelos.html">Vuelos</a></li>          
+                    <li><a href="./ofertas.html">Ofertas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Atención al cliente</h4>
+                <ul>
+                    <li><a href="./ayuda.html">Centro de ayuda</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./equipaje.html">Equipaje</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <section class="footer-bottom-section">
+                <h4>Suscribite a nuestras ofertas</h4>
+                <p>Recibí las mejores tarifas y promociones.</p>
+                
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" id="email-newsletter" name="email" placeholder="Tu email" required />
+                    <button type="submit">Suscribirme</button>
+                </form>
+                
+                <p class="newsletter-disclaimer">
+                    Para más información, consultá nuestra <a href="./politicas-privacidad.html#marketing">política de privacidad</a>.
+                </p>
+            </section>
+            
+            <section class="footer-bottom-section">
+                <h4>App de Ruta 3 Vuelos</h4>
+                <p>Reservá y gestioná tus vuelos donde estés.</p>
+                
+                <ul class="app-stores">
+                    <li><a href="#"><img src="../assets/images/badge-app-store.svg" alt="Descargar en App Store" /></a></li>
+                    <li><a href="#"><img src="../assets/images/badge-google-play.svg" alt="Disponible en Google Play" /></a></li>
+                    <li><a href="#"><img src="../assets/images/badge-huawei.svg" alt="Descargar en Huawei AppGallery" /></a></li>
+                </ul>
+            </section>
+            
+            <section class="footer-bottom-section">
+                <h4>Seguinos</h4>
+                <p>Compartí tu experiencia con Ruta 3 Vuelos.</p>
+                
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </section>
+        </div>
+        
+        <p class="copyright">© 2026 Ruta 3 Vuelos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
