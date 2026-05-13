@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -34,9 +34,20 @@
         <li class="hide-mobile"><a href="./mis-reservas.html"><i class="fa-solid fa-ticket"></i> Gestioná tu reserva</a>
         </li>
         <li><a href="./checkin.html"><i class="fa-regular fa-circle-check"></i> Check-in</a></li>
-        <li class="hide-mobile"><a href="./registro.html">Registrarse</a></li>
-        <li class="hide-mobile"><a href="./login.html">Iniciar sesión</a></li>
-        <li><a href="./micuenta.html" class="btn-account">Mi cuenta</a></li>
+        <li class="dropdown-cuenta">
+          <details class="cuenta-menu">
+            <summary class="btn-account">
+              <i class="fa-solid fa-user"></i> Mi cuenta
+              <i class="fa-solid fa-chevron-down cuenta-caret"></i>
+            </summary>
+            <ul class="cuenta-menu-lista">
+              <li><a href="./login.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión</a></li>
+              <li><a href="./registro.html"><i class="fa-solid fa-user-plus"></i> Registrarse</a></li>
+              <li class="cuenta-menu-separador"></li>
+              <li><a href="./micuenta.html"><i class="fa-solid fa-circle-user"></i> Mi perfil</a></li>
+            </ul>
+          </details>
+        </li>
       </ul>
     </div>
     
